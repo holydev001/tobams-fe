@@ -1,57 +1,95 @@
-# Frontend Intern Assessment
+# Tobams Frontend Intern Assessment
 
-Next.js implementation of the Tobams Frontend Intern Assessment design.
+Production-ready Next.js implementation of the Tobams Group training and development landing page.
 
-## Links
+## Submission links
 
-- GitHub repository: https://github.com/holydev001/tobams-fe
-- Live deployment: To be added after Vercel deployment
-- Assessment Figma design: https://www.figma.com/design/wuqCLkK1feTgB6xxSRRwZu/Frontend-Intern-Assessment
-- Inspection Figma file: https://www.figma.com/design/H1JIcfxggEzTeAGt4cjFx9/Untitled?node-id=135-66
+- **Public GitHub repository:** https://github.com/holydev001/tobams-fe
+- **Live deployment:** `PENDING VERCEL DEPLOYMENT — ADD THE FINAL URL BEFORE SUBMISSION`
+- **Assessment Figma design:** https://www.figma.com/design/wuqCLkK1feTgB6xxSRRwZu/Frontend-Intern-Assessment
+- **Figma inspection file:** https://www.figma.com/design/H1JIcfxggEzTeAGt4cjFx9/Untitled?node-id=135-66
 
 ## Stack
 
-- Next.js with the App Router
+- Next.js 16 with the App Router
 - TypeScript
-- Tailwind CSS
+- Tailwind CSS v4
 - ESLint with the Next.js configuration
-- `next/font` and `next/image` for optimized fonts and images
+- `next/font` for Nunito and Nunito Sans
+- `next/image` for optimized local image assets
+- pnpm for package management
 
 ## Getting started
 
-Install dependencies and start the development server with pnpm:
+Requirements: Node.js 20+ and pnpm.
 
 ```bash
 pnpm install
 pnpm dev
 ```
 
-Open http://localhost:3000 in your browser.
+Open http://localhost:3000.
 
-Available checks:
+Production checks:
 
 ```bash
 pnpm lint
 pnpm build
+pnpm start
+```
+
+## Project structure
+
+```text
+app/
+  globals.css       Global Tailwind entry and document styles
+  layout.tsx        Metadata, fonts, and root layout
+  page.tsx          Semantic page composition
+components/
+  Nav.tsx
+  Hero.tsx
+  HeroBackground.tsx
+  LearningManagement.tsx
+  CorporateTraining.tsx
+  PersonalizedTraining.tsx
+  CapacityDevelopment.tsx
+  ManagementDevelopment.tsx
+  TransformationHub.tsx
+  ConsultantTraining.tsx
+  ConsultationCta.tsx
+  Testimonials.tsx
+  FooterCta.tsx
+  Footer.tsx
+public/
+  Supplied Figma SVG and logo assets
 ```
 
 ## Design and technical decisions
 
-- TypeScript is used to catch type errors during development and make component props and data contracts explicit.
-- ESLint is included to enforce consistent code quality and identify common Next.js and React issues before submission.
-- The page is implemented as reusable components under `/components`, with semantic HTML and Tailwind responsive prefixes for the 425px, 768px, and desktop layouts.
-- The supplied Figma clone is treated as the source of truth for section dimensions, spacing, colors, typography, and responsive structure.
-- Standard Tailwind breakpoints are used; no custom media queries are required.
-- The hero background uses the supplied Figma artwork at viewport width (`w-screen`) so the image is not narrowed by the browser scrollbar; the hero copy remains constrained by the measured responsive side padding.
-- The 1440px Learning Management reference dimensions are preserved exactly; at narrower desktop widths, the content card grows with wrapped text to avoid clipping while maintaining the same component order and spacing rhythm.
-- The testimonial carousel keeps four cards in an accessible horizontal track while showing three cards in the desktop frame, matching the Figma layout.
-- The footer social marks are implemented as accessible inline SVGs because no separate social icon assets were supplied.
+- TypeScript catches errors during development and makes component props and data contracts explicit.
+- ESLint identifies common React and Next.js issues and keeps the final code consistent.
+- The page is split into semantic, reusable components under `/components`; the composition uses `<nav>`, `<main>`, `<section>`, and `<footer>` landmarks.
+- Nunito Sans is used for interface/body copy and Nunito is used for display headings where the Figma specification calls for it.
+- The supplied Figma inspection files were used as the source of truth for dimensions, spacing, typography, colors, and responsive ordering.
+- Standard Tailwind `sm:`, `md:`, and `lg:` breakpoints are used for responsive behavior. No custom media queries are used.
+- The supplied hero artwork is rendered edge-to-edge with a viewport-width wrapper. Its SVG `preserveAspectRatio="none"` behavior is intentional: it keeps the exported artwork flush with the viewport at mobile and desktop widths.
+- The desktop Figma reference is 1440px wide. Fluid sizing and wrapping are used at intermediate desktop widths to prevent content clipping.
+- The footer includes the separate Figma CTA strip, responsive link groups, contact information, registered offices, legal links, and copyright areas.
+- Social marks are accessible inline SVGs because separate social icon assets were not supplied.
+
+## Accessibility
+
+- Images use meaningful alt text.
+- Navigation, links, buttons, email, and telephone actions are keyboard-focusable.
+- Visible focus outlines are provided for interactive elements.
+- Heading hierarchy and landmark elements follow the page structure.
 
 ## AI disclosure
 
-AI tools were used as a development assistant for project scaffolding, code review, and implementation support. The final code is reviewed and maintained for this assessment.
+AI tools were used as a development assistant for project scaffolding, Figma-spec inspection, implementation support, code review, and verification. The final code is reviewed and maintained for this assessment.
 
-## Known issues
+## Known issues / final submission actions
 
-- The live URL will be updated once the Vercel deployment is created.
-- The fourth testimonial card is kept in the carousel track using the supplied fourth profile image; its copy is not fully visible in the supplied Figma viewport and should be replaced if an exact source copy is provided.
+- Replace the deployment placeholder above with the working Vercel URL before submitting.
+- Connect footer placeholder links to their production destinations if those URLs are supplied.
+- The fourth testimonial remains in the accessible carousel track using the supplied fourth profile asset; its complete source copy was not present in the supplied Figma viewport.
