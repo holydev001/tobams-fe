@@ -5,9 +5,8 @@ Production-ready Next.js implementation of the Tobams Group training and develop
 ## Submission links
 
 - **Public GitHub repository:** https://github.com/holydev001/tobams-fe
-- **Live deployment:** `PENDING VERCEL DEPLOYMENT — ADD THE FINAL URL BEFORE SUBMISSION`
+- **Live deployment:** `https://tobams-fe.vercel.app/`
 - **Assessment Figma design:** https://www.figma.com/design/wuqCLkK1feTgB6xxSRRwZu/Frontend-Intern-Assessment
-- **Figma inspection file:** https://www.figma.com/design/H1JIcfxggEzTeAGt4cjFx9/Untitled?node-id=135-66
 
 ## Stack
 
@@ -75,7 +74,6 @@ public/
 - The supplied hero artwork is rendered edge-to-edge with a viewport-width wrapper. Its SVG `preserveAspectRatio="none"` behavior is intentional: it keeps the exported artwork flush with the viewport at mobile and desktop widths.
 - The desktop Figma reference is 1440px wide. Fluid sizing and wrapping are used at intermediate desktop widths to prevent content clipping.
 - The footer includes the separate Figma CTA strip, responsive link groups, contact information, registered offices, legal links, and copyright areas.
-- Social marks are accessible inline SVGs because separate social icon assets were not supplied.
 
 ## Accessibility
 
@@ -86,10 +84,5 @@ public/
 
 ## AI disclosure
 
-AI tools were used as a development assistant for project scaffolding, Figma-spec inspection, implementation support, code review, and verification. The final code is reviewed and maintained for this assessment.
+AI tool were used as a development assistant for this project. The final code is reviewed and maintained for this assessment.
 
-## Known issues / final submission actions
-
-- Replace the deployment placeholder above with the working Vercel URL before submitting.
-- Connect footer placeholder links to their production destinations if those URLs are supplied.
-- The fourth testimonial remains in the accessible carousel track using the supplied fourth profile asset; its complete source copy was not present in the supplied Figma viewport.
