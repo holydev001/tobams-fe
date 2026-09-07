@@ -6,7 +6,8 @@ Next.js implementation of the Tobams Frontend Intern Assessment design.
 
 - GitHub repository: https://github.com/holydev001/tobams-fe
 - Live deployment: To be added after Vercel deployment
-- Figma design: https://www.figma.com/design/wuqCLkK1feTgB6xxSRRwZu/Frontend-Intern-Assessment
+- Assessment Figma design: https://www.figma.com/design/wuqCLkK1feTgB6xxSRRwZu/Frontend-Intern-Assessment
+- Inspection Figma file: https://www.figma.com/design/H1JIcfxggEzTeAGt4cjFx9/Untitled?node-id=135-66
 
 ## Stack
 
@@ -38,8 +39,11 @@ pnpm build
 
 - TypeScript is used to catch type errors during development and make component props and data contracts explicit.
 - ESLint is included to enforce consistent code quality and identify common Next.js and React issues before submission.
-- The page is being implemented as reusable components under `/components`, with semantic HTML and Tailwind responsive prefixes for the 425px, 768px, and desktop layouts.
-- The design is treated as the source of truth. Any intentional deviation or technical assumption will be recorded here as implementation continues.
+- The page is implemented as reusable components under `/components`, with semantic HTML and Tailwind responsive prefixes for the 425px, 768px, and desktop layouts.
+- The supplied Figma clone is treated as the source of truth for section dimensions, spacing, colors, typography, and responsive structure.
+- Standard Tailwind breakpoints are used; no custom media queries are required.
+- The testimonial carousel keeps four cards in an accessible horizontal track while showing three cards in the desktop frame, matching the Figma layout.
+- The footer social marks are implemented as accessible inline SVGs because no separate social icon assets were supplied.
 
 ## AI disclosure
 
