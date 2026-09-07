@@ -9,7 +9,7 @@ export default function HeroBackground() {
         fill
         priority
         sizes="100vw"
-        className="object-cover md:hidden"
+        className="object-fill md:hidden"
       />
       <Image
         src="/desktop-hero-img.svg"
@@ -17,7 +17,7 @@ export default function HeroBackground() {
         fill
         priority
         sizes="100vw"
-        className="hidden object-cover md:block"
+        className="hidden object-fill md:block"
       />
     </div>
   );
