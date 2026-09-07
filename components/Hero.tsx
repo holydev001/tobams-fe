@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       aria-labelledby="hero-title"
-      className="relative isolate flex h-[317px] w-screen flex-col items-center justify-center overflow-hidden px-6 py-10 text-center text-white md:h-[511px] md:px-16 md:py-28"
+      className="relative isolate flex h-[317px] w-screen flex-col items-center justify-center px-6 py-10 text-center text-white md:h-[511px] md:px-16 md:py-28"
     >
       <HeroBackground />
       <div className="relative flex w-full flex-col items-center gap-6 md:gap-10">
