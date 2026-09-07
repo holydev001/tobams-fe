@@ -40,7 +40,7 @@ const desktopTextWidths: Record<(typeof links)[number][0], string> = {
 function Logo() {
   return (
     <Link href="/" aria-label="Tobams Group home" className="focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6b145a]">
-      <Image src="/tobams-logo.svg" alt="Tobams Group" width={166} height={64} priority className="h-[50px] w-auto object-contain lg:h-16" />
+      <Image src="/tobams-logo.svg" alt="Tobams Group" width={166} height={64} priority className="h-[42px] w-[123.8462px] object-fill lg:h-16 lg:w-auto lg:object-contain" />
     </Link>
   );
 }
@@ -70,18 +70,18 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="relative z-20 bg-white text-[#202020] shadow-sm">
-      <div className="relative flex h-[76px] items-center justify-between px-[26px] lg:h-[104px] lg:px-16 lg:after:absolute lg:after:bottom-0 lg:after:left-0 lg:after:right-0 lg:after:h-px lg:after:bg-[#DDD0DA]">
+    <header className="relative z-20 bg-[#F9F9F9] text-[#202020] shadow-[0_0_2px_rgba(0,0,0,0.25)] lg:bg-white lg:shadow-none">
+      <div className="relative flex h-[76px] items-center justify-between px-6 pt-[18px] pb-4 lg:h-[104px] lg:px-16 lg:py-0 lg:after:absolute lg:after:bottom-0 lg:after:left-0 lg:after:right-0 lg:after:h-px lg:after:bg-[#DDD0DA]">
         <Logo />
         <div className="hidden items-center gap-6 lg:flex">
-          <button type="button" className="inline-flex h-[48px] w-[167px] items-center justify-center gap-3 rounded-[4px] border border-[#571244] bg-[#571244] px-4 text-[18px] font-semibold leading-[27px] text-white hover:bg-[#451036] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#571244]">
-            <span className="flex h-8 w-8 items-center justify-center rounded-full border-[1.5px] border-[#571244] bg-[#DDD0DA]"><Image src="/user.svg" alt="" width={24} height={24} aria-hidden="true" /></span>
-            Account <DropdownIcon light />
+          <button type="button" className="inline-flex h-[48px] w-[167px] items-center justify-center gap-3 rounded-[4px] border border-[#571244] bg-[#571244] px-[15px] text-[18px] font-semibold leading-[27px] text-white hover:bg-[#451036] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#571244]">
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#DDD0DA]"><Image src="/user.svg" alt="" width={24} height={24} aria-hidden="true" /></span>
+            <span className="flex w-[91px] shrink-0 items-center gap-1 leading-[27px]"><span className="w-[67px] text-center">Account</span><DropdownIcon light className="shrink-0" /></span>
           </button>
           <Link href="#assessment" className="inline-flex h-[48px] w-[183px] items-center justify-center whitespace-nowrap rounded-[4px] border border-[#EF4353] bg-[#EF4353] px-[19px] text-[18px] font-semibold leading-[27px] text-white hover:bg-[#d83a4a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#EF4353]">Take Assessment</Link>
         </div>
-        <button type="button" aria-label={open ? "Close navigation menu" : "Open navigation menu"} aria-expanded={open} aria-controls="primary-navigation" onClick={() => setOpen(!open)} className="inline-flex h-[28px] w-[28px] items-center justify-center rounded-[6px] bg-[#202020] text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#571244] lg:hidden">
-          <span aria-hidden="true" className="flex w-[16px] flex-col gap-[3px]"><span className="h-[2px] w-full rounded-full bg-current" /><span className="h-[2px] w-full rounded-full bg-current" /><span className="h-[2px] w-full rounded-full bg-current" /></span>
+        <button type="button" aria-label={open ? "Close navigation menu" : "Open navigation menu"} aria-expanded={open} aria-controls="primary-navigation" onClick={() => setOpen(!open)} className="inline-flex h-8 w-8 items-center justify-center rounded-[4px] bg-transparent text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#571244] lg:hidden">
+          <span aria-hidden="true" className="flex h-[26.6667px] w-[26.6667px] items-center justify-center rounded-[6px] bg-[#151515]"><span className="flex w-4 flex-col gap-[3px]"><span className="h-[2px] w-full rounded-full bg-current" /><span className="h-[2px] w-full rounded-full bg-current" /><span className="h-[2px] w-full rounded-full bg-current" /></span></span>
         </button>
       </div>
       <nav id="primary-navigation" aria-label="Primary navigation" className={`${open ? "block" : "hidden"} lg:block`}>
