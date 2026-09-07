@@ -2,6 +2,7 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import LearningManagement from "@/components/LearningManagement";
 import CorporateTraining from "@/components/CorporateTraining";
+import PersonalizedTraining from "@/components/PersonalizedTraining";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <Hero />
         <LearningManagement />
         <CorporateTraining />
+        <PersonalizedTraining />
       </main>
     </div>
   );
