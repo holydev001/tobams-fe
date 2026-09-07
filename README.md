@@ -52,3 +52,4 @@ AI tools were used as a development assistant for project scaffolding, code revi
 ## Known issues
 
 - The live URL will be updated once the Vercel deployment is created.
+- The fourth testimonial card is kept in the carousel track using the supplied fourth profile image; its copy is not fully visible in the supplied Figma viewport and should be replaced if an exact source copy is provided.
