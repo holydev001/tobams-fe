@@ -42,6 +42,7 @@ pnpm build
 - The page is implemented as reusable components under `/components`, with semantic HTML and Tailwind responsive prefixes for the 425px, 768px, and desktop layouts.
 - The supplied Figma clone is treated as the source of truth for section dimensions, spacing, colors, typography, and responsive structure.
 - Standard Tailwind breakpoints are used; no custom media queries are required.
+- The hero background uses the supplied Figma artwork at viewport width (`w-screen`) so the image is not narrowed by the browser scrollbar; the hero copy remains constrained by the measured responsive side padding.
 - The testimonial carousel keeps four cards in an accessible horizontal track while showing three cards in the desktop frame, matching the Figma layout.
 - The footer social marks are implemented as accessible inline SVGs because no separate social icon assets were supplied.
 
