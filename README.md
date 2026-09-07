@@ -43,6 +43,7 @@ pnpm build
 - The supplied Figma clone is treated as the source of truth for section dimensions, spacing, colors, typography, and responsive structure.
 - Standard Tailwind breakpoints are used; no custom media queries are required.
 - The hero background uses the supplied Figma artwork at viewport width (`w-screen`) so the image is not narrowed by the browser scrollbar; the hero copy remains constrained by the measured responsive side padding.
+- The 1440px Learning Management reference dimensions are preserved exactly; at narrower desktop widths, the content card grows with wrapped text to avoid clipping while maintaining the same component order and spacing rhythm.
 - The testimonial carousel keeps four cards in an accessible horizontal track while showing three cards in the desktop frame, matching the Figma layout.
 - The footer social marks are implemented as accessible inline SVGs because no separate social icon assets were supplied.
 
