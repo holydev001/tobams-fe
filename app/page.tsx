@@ -9,6 +9,7 @@ import TransformationHub from "@/components/TransformationHub";
 import ConsultantTraining from "@/components/ConsultantTraining";
 import ConsultationCta from "@/components/ConsultationCta";
 import Testimonials from "@/components/Testimonials";
+import FooterCta from "@/components/FooterCta";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -27,6 +28,7 @@ export default function Home() {
         <ConsultationCta />
         <Testimonials />
       </main>
+      <FooterCta />
       <Footer />
     </div>
   );
